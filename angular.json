@@ -5,9 +5,11 @@
   "projects": {
     "tlc-site": {
       "projectType": "application",
-      "schematics": {"@schematics/angular:component": {
-        "style": "scss"
-      }},
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -120,6 +122,10 @@
               "devServerTarget": "tlc-site:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
     }
